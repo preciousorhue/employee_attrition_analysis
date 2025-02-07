@@ -1,0 +1,99 @@
+---
+title: "analysis_with_dplyr"
+author: "DA class"
+date: "2/7/2025"
+output: html_document
+---
+
+```{r}
+# load data into Rstudio
+
+attrition<- read.csv(file.choose())
+```
+
+```{r}
+
+# show the first 6 rows in the dataset
+View(head(attrition))
+head(attrition)
+```
+
+```{r}
+
+# get the structure of the dataset
+str(attrition)
+```
+
+
+```{r}
+# load the dplyr package
+library(dplyr)
+```
+
+
+```{r}
+
+# create an age column using mutate function 
+
+```
+
+
+```{r}
+# remove first column
+
+```
+
+
+```{r}
+# show all employees that have left the company
+employees_gone<-attrition %>% filter(attrition == "Yes")
+employees_gone
+
+
+```
+
+```{r}
+# show total number of employees
+nrow(attrition)
+
+```
+
+```{r}
+
+# show the percentage of employees that left
+round(nrow(employees_gone)/nrow(attrition) * 100, 2)
+
+
+```
+
+```{r}
+# show the employees in sales department that are female
+attrition %>% filter(dept == "Sales", gender == "Female") 
+
+```
+
+```{r}
+
+# show all the employees in the Human resources dept that are male and are married
+
+
+
+```
+
+
+```{r}
+
+# show only the following columns
+# attrition , gender , years_in_current_pos,isMarried, last_year_promoted,
+#then display all employees who left the company and their years_in_current_pos is more than 4 and they are married.
+
+
+```
+
+```{r}
+# show only the following columns
+# age, attrition , gender , years_in_current_pos, last_year_promoted and 
+# show the list of employees btw the ages of 18 and 25 that have left the company
+
+```
+
